@@ -1,4 +1,4 @@
-# Turtle Tracker
+# Turtle Visualizer
 
 ROS2 Jazzy용 turtlesim 궤적 추적 패키지입니다. OpenCV를 사용하여 거북이의 움직임을 실시간으로 시각화하고, desired path와 함께 표시합니다.
 
@@ -18,8 +18,8 @@ ROS2 Jazzy용 turtlesim 궤적 추적 패키지입니다. OpenCV를 사용하여
 ## 빌드 방법
 
 ```bash
-cd ~/turtle_tracker_ws
-colcon build --packages-select turtle_tracker
+cd ~/turtle_visualizer_ws
+colcon build --packages-select turtle_visualizer
 source install/setup.bash
 ```
 
@@ -34,7 +34,7 @@ ros2 run turtlesim turtlesim_node
 
 터미널 2:
 ```bash
-ros2 run turtle_tracker turtle_tracker_node
+ros2 run turtle_tracker turtle_visualizer_node
 ```
 
 터미널 3 (거북이 조종):
@@ -57,7 +57,7 @@ ros2 run turtlesim turtle_teleop_key
 
 모든 노드를 한 번에 실행:
 ```bash
-ros2 launch turtle_tracker turtle_with_path.launch.py
+ros2 launch turtle_visualizer turtle_with_path.launch.py
 ```
 
 별도 터미널에서 거북이 조종:
@@ -70,8 +70,8 @@ ros2 run turtlesim turtle_teleop_key
 # 터미널 1: turtlesim
 ros2 run turtlesim turtlesim_node
 
-# 터미널 2: tracker
-ros2 run turtle_tracker turtle_tracker_node
+# 터미널 2: visualizer
+ros2 run turtle_visualizer turtle_visualizer_node
 
 # 터미널 3: path publisher
 ros2 run path_publisher circular_path_publisher_node
@@ -93,15 +93,15 @@ ros2 run turtlesim turtle_teleop_key
 ## 패키지 구조
 
 ```
-turtle_tracker/
+turtle_visualizer/
 ├── CMakeLists.txt
 ├── package.xml
 ├── src/
-│   └── turtle_tracker_node.cpp
+│   └── turtle_visualizer_node.cpp
 ├── include/
-│   └── turtle_tracker/
+│   └── turtle_visualizer/
 └── launch/
-    └── turtle_tracker.launch.py
+    └── turtle_visualizer.launch.py
 ```
 
 ## 주요 특징
