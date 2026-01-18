@@ -34,7 +34,7 @@ ros2 run turtlesim turtlesim_node
 
 터미널 2:
 ```bash
-ros2 run turtle_tracker turtle_visualizer_node
+ros2 run turtle_visualizer turtle_visualizer_node
 ```
 
 터미널 3 (거북이 조종):
@@ -45,7 +45,7 @@ ros2 run turtlesim turtle_teleop_key
 ### 방법 2: Launch 파일 사용
 
 ```bash
-ros2 launch turtle_tracker turtle_tracker.launch.py
+ros2 launch turtle_visualizer turtle_visualizer.launch.py
 ```
 
 별도 터미널에서 거북이 조종:
